@@ -1,0 +1,141 @@
+ /* Clock */
+  .clock {
+    width: 550px;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://i.ibb.co/stjTJ0z/clock-bg.png");
+    background-size: 89%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #165B33;
+    border-radius: 50%;
+  }
+  
+  .clock:before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: #BB2528;
+    border-radius: 50%;
+    z-index: 4;
+  }
+  
+  .clock__hour,
+  .clock__minute,
+  .clock__second {
+    position: absolute;
+  }
+  
+  .clock__hour,
+  .clock__hour-arrow {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .clock__minute,
+  .clock__minute-arrow {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .clock__second,
+  .clock__second-arrow {
+    width: 230px;
+    height: 230px;
+  }
+  
+  .clock__hour-arrow,
+  .clock__minute-arrow,
+  .clock__second-arrow {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+  }
+  
+  .clock__hour-arrow:before {
+    content: "";
+    position: absolute;
+    background-color: #F8B229;
+    width: 6px;
+    height: 70px;
+    z-index: 1;
+    border-radius: 6px 6px 0 0;
+  }
+  
+  .clock__minute-arrow:before {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    width: 6px;
+    height: 100px;
+    z-index: 2;
+    border-radius: 6px 6px 0 0;
+  }
+  
+  .clock__second-arrow:before {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    width: 2px;
+    height: 150px;
+    z-index: 3;
+    border-radius: 6px 6px 0 0;
+  }
+
+/* Slider */
+*{
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  transition: background 0.2s linear;
+}
+body.dark {
+  background-color: #292c35;
+}
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.label {
+  width: 50px;
+  height: 26px;
+  background-color:#111;
+  display: flex;
+  border-radius:50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  transform: scale(1.5);
+}
+
+.ball {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball{
+  transform: translateX(24px);
+}
+
+
+
+ 
+  
+  
